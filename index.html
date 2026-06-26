@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U2 | Busca Linear x Busca Binaria</title>
+    <meta
+      name="description"
+      content="Comparativo de busca linear e busca binaria usando o arquivo br-utf8.txt."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero card">
+        <p class="eyebrow">U2 - Tarefa (05/03/2026 a 19/03/2026)</p>
+        <h1>Busca linear e busca binaria com dicionario em portugues</h1>
+        <p class="lead">
+          Esta pagina carrega o arquivo <code>br-utf8.txt</code> para memoria,
+          busca cada palavra da frase do enunciado e compara os tempos entre
+          busca linear e busca binaria.
+        </p>
+        <div class="hero-meta">
+          <span class="pill">Plataforma: Netlify</span>
+          <span class="pill">Fonte: IME-USP</span>
+          <span class="pill">Arquivo: br-utf8.txt (UTF-8)</span>
+          <span class="pill">Unidade: ms</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="section-header">
+            <p class="section-kicker">Entrada</p>
+            <h2>Frase analisada</h2>
+          </div>
+          <label class="sr-only" for="phrase">Frase da atividade</label>
+          <textarea id="phrase" rows="8"></textarea>
+          <div class="actions">
+            <button id="runButton" type="button">Carregar dicionario e medir</button>
+            <p id="status" class="status" role="status" aria-live="polite">
+              Pronto para executar.
+            </p>
+          </div>
+          <p class="note">
+            A pontuacao e removida na tokenizacao. Os acentos sao preservados.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="section-header">
+            <p class="section-kicker">Resumo</p>
+            <h2>Resultado geral</h2>
+          </div>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <span class="label">Palavras no dicionario</span>
+              <strong id="dictionaryCount">-</strong>
+            </div>
+            <div class="summary-item">
+              <span class="label">Palavras na frase</span>
+              <strong id="phraseCount">-</strong>
+            </div>
+            <div class="summary-item">
+              <span class="label">Tempo total linear</span>
+              <strong id="linearTotal">-</strong>
+            </div>
+            <div class="summary-item">
+              <span class="label">Tempo total binaria</span>
+              <strong id="binaryTotal">-</strong>
+            </div>
+            <div class="summary-item">
+              <span class="label">Media linear por palavra</span>
+              <strong id="linearAverage">-</strong>
+            </div>
+            <div class="summary-item">
+              <span class="label">Media binaria por palavra</span>
+              <strong id="binaryAverage">-</strong>
+            </div>
+          </div>
+          <div class="comparison">
+            <p class="section-kicker">Comparativo</p>
+            <p id="comparisonText" class="comparison-text">
+              Clique em "Carregar dicionario e medir" para executar.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="card table-card">
+        <div class="section-header">
+          <p class="section-kicker">Tabela</p>
+          <h2>Resultado palavra por palavra</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Palavra</th>
+                <th>Encontrada?</th>
+                <th>Busca linear (ms)</th>
+                <th>Busca binaria (ms)</th>
+              </tr>
+            </thead>
+            <tbody id="resultBody">
+              <tr>
+                <td colspan="4" class="empty">Nenhuma analise executada ainda.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid details-grid">
+        <article class="card">
+          <div class="section-header">
+            <p class="section-kicker">Metodologia</p>
+            <h2>Como os tempos sao medidos</h2>
+          </div>
+          <ul class="info-list">
+            <li>O arquivo br-utf8.txt e carregado para memoria.</li>
+            <li>A busca linear percorre item por item da lista.</li>
+            <li>A busca binaria usa uma copia ordenada da lista.</li>
+            <li>
+              Cada busca e repetida em lote para melhorar a precisao dos tempos.
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="section-header">
+            <p class="section-kicker">Entrega</p>
+            <h2>Publicacao no Netlify</h2>
+          </div>
+          <p class="note">
+            Esta pasta esta pronta para deploy estatico no Netlify.
+          </p>
+          <p class="note">
+            O arquivo entrega.txt foi criado para facilitar a postagem no AVA.
+          </p>
+        </article>
+      </section>
+    </main>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

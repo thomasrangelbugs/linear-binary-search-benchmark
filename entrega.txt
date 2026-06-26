@@ -1,0 +1,18 @@
+Atividade U2 - Busca linear e busca binaria
+
+Link do projeto publicado:
+https://SEU-PROJETO.netlify.app
+
+Link do codigo-fonte comentado:
+https://github.com/SEU-USUARIO/SEU-REPOSITORIO
+
+Arquivo utilizado:
+https://www.ime.usp.br/~pf/dicios/br-utf8.txt
+
+Unidade de tempo apresentada:
+milissegundos (ms)
+
+Descricao resumida:
+O projeto carrega o arquivo br-utf8.txt para memoria e mede o tempo de busca
+da frase do enunciado, palavra por palavra, usando busca linear e busca
+binaria. Os resultados sao exibidos em tabela e em resumo comparativo.
