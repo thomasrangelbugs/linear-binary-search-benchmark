@@ -1,47 +1,61 @@
-# Linear vs Binary Search Benchmark
+# Busca linear x busca binária
 
-> Demonstracao web da diferenca de performance entre buscas linear e binaria.
+Demonstração acadêmica que procura palavras de uma frase no dicionário português `br-utf8.txt` e compara os tempos de busca linear e binária.
 
-## Sobre o projeto
+## Estado do projeto
 
-Atividade academica U2 que carrega o dicionario portugues br-utf8.txt (IME-USP), tokeniza a frase do enunciado e mede o tempo de busca de cada palavra usando busca linear e busca binaria. Resultados exibidos em milissegundos com comparacao visual direta entre os dois algoritmos, evidenciando a vantagem da busca binaria em estruturas ordenadas.
+Aplicação web estática executada no navegador. O repositório não define etapa de instalação nem de compilação, salvo quando indicado abaixo.
 
-## Funcionalidades principais
+## Funcionalidades
 
-- Carregamento do dicionario br-utf8.txt (IME-USP) em memoria
-- Tokenizacao da frase do enunciado palavra a palavra
-- Medicao de tempo em milissegundos para busca linear
-- Medicao de tempo em milissegundos para busca binaria
-- Comparacao visual lado a lado dos resultados
-- Site estatico pronto para publicacao no Netlify
+- Carregamento do dicionário
+- Tokenização da frase
+- Busca linear
+- Busca binária
+- Medição em milissegundos
+- Comparação visual
 
-## Tecnologias utilizadas
+## Tecnologias
 
 - HTML
 - CSS
 - JavaScript
 - Intl.Collator
-- Netlify
 
-## Como executar
+## Estrutura principal
 
-Abra `index.html` no navegador. A pagina carrega o dicionario e executa as buscas automaticamente.
+- `index.html — relatório`
+- `script.js — carga, normalização, buscas e medição`
+- `br-utf8.txt — base de palavras`
+- `netlify.toml — deploy`
 
-## Deploy / Demonstracao
+## Executar localmente
 
-Publique a pasta raiz no Netlify. O arquivo `netlify.toml` ja define a configuracao.
+Não há dependências de pacote nem comando de build registrado para este projeto. Abra `index.html` em um navegador moderno.
 
-## Fonte dos dados
+## Como usar
 
-- IME-USP: https://www.ime.usp.br/~pf/dicios/
-- Arquivo: br-utf8.txt
+- Abra a página e aguarde o carregamento do dicionário.
+- Compare presença e tempo de cada palavra nos dois algoritmos.
 
-## Repositorio
+## Integrações
 
-[github.com/thomasrangelbugs/linear-binary-search-benchmark](https://github.com/thomasrangelbugs/linear-binary-search-benchmark)
+- O dicionário é atribuído ao IME-USP no README original.
 
-## Autor
+## Testes
 
-**Thomas Rangel Bugs**
+Não foi identificado script de teste automatizado. Valide manualmente os fluxos descritos em **Como usar**, em desktop e em viewport móvel.
 
-Desenvolvido para portfolio, estudo e pratica de algoritmos de busca.
+## Publicação
+
+- O `netlify.toml` publica a pasta atual (`.`) sem build.
+
+## Limitações e segurança
+
+- A busca binária pressupõe dados ordenados segundo o mesmo critério de comparação.
+- Tempos curtos variam por navegador e máquina.
+- Se o navegador bloquear leitura local do TXT, use um servidor estático; o repositório não define comando para isso.
+
+## Repositório
+
+[redobrai-del/thomas-projetos](https://github.com/redobrai-del/thomas-projetos)
