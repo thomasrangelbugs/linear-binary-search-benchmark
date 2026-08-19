@@ -1,4 +1,4 @@
-# Busca linear x busca binária
+﻿# Busca linear x busca binária
 
 Demonstração acadêmica que procura palavras de uma frase no dicionário português `br-utf8.txt` e compara os tempos de busca linear e binária.
 
@@ -56,6 +56,15 @@ Não foi identificado script de teste automatizado. Valide manualmente os fluxos
 - Tempos curtos variam por navegador e máquina.
 - Se o navegador bloquear leitura local do TXT, use um servidor estático; o repositório não define comando para isso.
 
+
+## Requisitos
+
+- Navegador moderno (Chrome, Edge, Firefox ou Safari atualizado)
+- Conexão com a internet apenas para recursos externos integrados, quando aplicável
 ## Repositório
 
-[redobrai-del/thomas-projetos](https://github.com/redobrai-del/thomas-projetos)
+[thomasrangelbugs/linear-binary-search-benchmark](https://github.com/thomasrangelbugs/linear-binary-search-benchmark)
+
+## Autor
+
+**Thomas Rangel Bugs** — [github.com/thomasrangelbugs](https://github.com/thomasrangelbugs)
